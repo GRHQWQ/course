@@ -15,8 +15,11 @@ knn = KNeighborsClassifier(n_neighbors=3)
 from sklearn.model_selection import GridSearchCV
 param_grid = {
     'n_neighbors':[3,4,5],
-    
 }
+#precision
+#recall
+#F1
+#accuracy
 gs =GridSearchCV(knn,param_grid,scoring='accuracy',cv=5,verbose=2)
 gs.fit(iris_X,iris_y)
 print(gs.best_params_, gs.best_score_)
